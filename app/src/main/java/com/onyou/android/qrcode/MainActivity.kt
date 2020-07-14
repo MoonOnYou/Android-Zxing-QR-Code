@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         textViewGoToScan.setOnClickListener {
-            IntentIntegrator(this).setOrientationLocked(false).setPrompt("테스트으으으")
+            IntentIntegrator(this).setOrientationLocked(false)
                 .setCaptureActivity(ScanActivity::class.java).initiateScan()
         }
     }
@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         val toast : String?
         if (result != null) {
             toast = if (result.contents == null) {
-                "Cancelled from fragment"
+                "Cancelled from null"
             } else {
-                "Scanned from fragment: " + result.contents
+                "Scanned from : " + result.contents
             }
             Toast.makeText(this, toast, Toast.LENGTH_LONG).show()
         }

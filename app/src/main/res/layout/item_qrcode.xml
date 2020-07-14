@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+ <!--    각각 id를 다른 이름으로 주거나 안주면 에러남 -->
+<!--    app:zxing_framing_rect_width="280dp"-->
+<!--    app:zxing_framing_rect_height="280dp"-->
+<!--    이게 좀더 작아야 인식이 잘되는거 같은디..-->
+    <com.journeyapps.barcodescanner.BarcodeView
+        android:id="@+id/zxing_barcode_surface"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@color/colorAccent"
+        app:zxing_framing_rect_width="280dp"
+        app:zxing_framing_rect_height="280dp"/>
+
+    <com.journeyapps.barcodescanner.ViewfinderView
+        android:id="@+id/zxing_viewfinder_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+</merge>
