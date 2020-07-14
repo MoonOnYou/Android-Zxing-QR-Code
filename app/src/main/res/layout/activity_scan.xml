@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     tools:context=".ScanActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test coustom"/>
+        android:text="test coustom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"/>
 
     <com.journeyapps.barcodescanner.DecoratedBarcodeView
         android:id="@+id/barcodeView"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="24dp"
-        app:zxing_scanner_layout="@layout/item_qrcode"/>
+        app:zxing_scanner_layout="@layout/item_qrcode"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="xml에서 커스텀함"
+        app:layout_constraintLeft_toLeftOf="@id/barcodeView"
+        app:layout_constraintRight_toRightOf="@id/barcodeView"
+        app:layout_constraintBottom_toBottomOf="@id/barcodeView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
